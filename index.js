@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const input = require("./input");
+const Input = require("./input");
 
 (async () => {
   try {
@@ -13,12 +13,14 @@ const input = require("./input");
     );
 
     // Page 1 - Input Page
-    await input(
+    await Input(
       page,
       "MGR CHENNAI CTL - MAS",
       "VIJAYAWADA JN - BZA",
       "30-09-2019"
     );
+
+    // Page 2 - Result Page
 
     console.log("Done");
   } catch (e) {

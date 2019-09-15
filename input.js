@@ -1,4 +1,4 @@
-module.exports = input = async (page, origin, destination, date) => {
+module.exports = Input = async (page, origin, destination, date) => {
   // Go to ITCTC page
   await page.goto("https://www.irctc.co.in/nget/train-search");
   await page.waitForSelector("#origin > span > input");
