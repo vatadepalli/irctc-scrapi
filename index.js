@@ -1,11 +1,14 @@
 const puppeteer = require("puppeteer");
 const Input = require("./input");
+const TrainList = require("./TrainList/TrainList");
 
 (async () => {
   try {
     // Setup
     const browser = await puppeteer.launch({
-      headless: false
+      headless: false,
+      devtools: true,
+      args: ["--window-size=1920x1080", "--window-position=0,0"]
     });
     const page = await browser.newPage();
     page.setUserAgent(
@@ -21,6 +24,7 @@ const Input = require("./input");
     );
 
     // Page 2 - Result Page
+    await TrainList(page);
 
     console.log("Done");
   } catch (e) {
