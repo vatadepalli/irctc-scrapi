@@ -9,7 +9,7 @@ module.exports = TrainList = async page => {
       if (body) {
         try {
           const json = JSON.parse(body);
-          console.log(JSON.stringify(json));
+          console.log(JSON.stringify(json, null, 4));
         } catch (e) {}
       }
     }
