@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const Input = require("./input");
+const Input = require("./Input/Input");
 const TrainList = require("./TrainList/TrainList");
 
 (async () => {
