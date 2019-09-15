@@ -7,7 +7,7 @@ const TrainList = require("./TrainList/TrainList");
     // Setup
     const browser = await puppeteer.launch({
       headless: false,
-      devtools: true,
+      // devtools: true,
       args: ["--window-size=1920x1080", "--window-position=0,0"]
     });
     const page = await browser.newPage();
